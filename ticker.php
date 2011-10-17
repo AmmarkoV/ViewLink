@@ -1,9 +1,8 @@
 <?php 
 
-  
   function ServeTicker($hostname,$last)
   {
-  	  $file=fopen($hostname,"r");
+  	  $file=fopen("users/".$hostname,"r");
   	  $now = fgets($file);
   	  $now = trim ($now );
      fclose($file); 
@@ -35,10 +34,7 @@
     echo  "</body></html> ";     
   }
 
-
-
-
-
+ 
 
 if (isset($_GET['i'])&&isset($_GET['last'])) 
  {  
@@ -46,6 +42,5 @@ if (isset($_GET['i'])&&isset($_GET['last']))
  }
   else
 { echo "Nothing provided"; }
-  
-   
+     
 ?>
