@@ -2,11 +2,17 @@
   
   function UpdateSite($hostname,$new_site,$password)
    {
-   	//echo " Command hostname ".$hostname." password ".$password." site ".$new_site;
-   	//$file=fopen("users/".$hostname,"w");
-   	$file=fopen("users/ammar","w");
-   	 fwrite($file,$new_site);
-   	fclose($file); 
+      if ( strlen($new_site) > 255 ) 
+        {
+          echo " Site is too long.. :S ";	 
+        } else {
+        { 
+       	//echo " Command hostname ".$hostname." password ".$password." site ".$new_site;
+   	   //$file=fopen("users/".$hostname,"w");
+   	   $file=fopen("users/ammar","w");
+   	   fwrite($file,$new_site);
+   	   fclose($file);
+   	  }  
    }   
   
   
