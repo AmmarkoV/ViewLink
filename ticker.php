@@ -5,7 +5,7 @@
       if ( strlen($new_site) > 255 ) 
         {
           echo " Site is too long.. :S ";	 
-        } else {
+        } else 
         { 
        	//echo " Command hostname ".$hostname." password ".$password." site ".$new_site;
    	   //$file=fopen("users/".$hostname,"w");
